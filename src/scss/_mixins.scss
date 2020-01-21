@@ -1,0 +1,25 @@
+@mixin visuallyHidden() {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+@mixin button() {
+    cursor: pointer;
+    border: 2px solid var(--customYellow);
+    border-radius: 8px;
+    background-color: var(--customDark);
+    color: #fff;
+    font-size: 16px;
+    padding: 0.5em 1em;
+    font-family: inherit;
+    transition: background-color 0.3s ease-in;
+    &:hover {
+        background-color: rgba(32, 35, 41, 0.75);
+    }
+}
